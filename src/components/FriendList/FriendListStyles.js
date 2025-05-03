@@ -21,12 +21,14 @@ export const Item = styled.li`
   background-color: #fff;
 `;
 
-export const Status = styled.span`
+export const Status = styled.span.withConfig({
+  shouldForwardProp: prop => prop !== 'isOnline',
+})`
   margin-left: 10px;
   width: 15px;
   height: 15px;
   border-radius: 100%;
-  background-color: ${props => (props.typeName ? 'green' : 'red')};
+  background-color: ${props => (props.isOnline ? 'green' : 'red')};
 `;
 
 export const Image = styled.img`

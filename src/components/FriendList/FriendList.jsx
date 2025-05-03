@@ -1,5 +1,5 @@
 import { FriendItem } from "./FriendItem"
-import { List } from "./FriendList.styled"
+import { List } from "./FriendListStyles"
 
 
 export const FriendList = ({friends}) => {
